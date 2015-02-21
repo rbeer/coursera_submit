@@ -1,0 +1,9 @@
+USERNAME mymail
+PASSWORD unencrypted? :/
+
+# UNIX like
+RES "res/","~/coursera/matrix/labs/res"
+
+# Windows
+# (I guess the %VARIABLES% should work)
+RES "C:\\coursera\\matrix\\res","%USERPROFILE%\\Documents\\coursera\\matrix\\res"
