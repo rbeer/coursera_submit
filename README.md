@@ -162,6 +162,7 @@ I'm not exactly sure on how Windows handles all of this, since I haven't had the
 
 <hr />
 So long, and never forget:<br />
-'Cause serious coding is supposed to be fun! :)
+'Cause serious coding is supposed to be fun! :)<br />
+http://www.workofprogress.org
 
 -r.beer
