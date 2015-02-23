@@ -1,11 +1,53 @@
-[coursera](http://coursera.org/)_submit_dirs.py
-============================
+coursera_submit_dirs.py
+=========================================
+
+Files
+-----------------------------------------
+- coursera_submit_dirs.py - [Coursera](http://coursera.org/) assignment/labs submit script, supporting folders.
+- coursera_submit.patch - Sometimes you fall in love with your code and files, I know that. So in case you don't have the heart to just kill and replace your current coursera_submit.py, here's a patch for it.
+- coursera_submit.py - Original submit script
+
+Folder? What? Why?
+-----------------------------------------
+
+In the version provided by coursera, coursera_submit.py requires **every** (stencil for assignments/labs, resources) file to be in the same directory. Now, in week 3 of my course, I realized: This is gonna end baaaadly.
+
+| Ugh! | That's better :) |
+|------|------------------|
+| <img src="img/bad-tree.png" /> | <img src="img/good-tree.png" /> |
+
+Usage
+-----------------------------------------
+
+###General
+Invoking the script works pretty much the same as before. With the obvious difference, that you can pass it a URI to a file sitting in another directory.
+```
+python3 ./coursera_submit_dirs.py labs/0/python_lab.py --username Bob --password ...
+```
+By the way: The directory does **not** have to be a sub-directory of the script.
+```
+python3 ./coursera_submit_dirs.py /somewhere/else/in/the/matrix/The_Function_problems.py --username Bob --password ...
+```
+
+I've also added the [shebang](http://en.wikipedia.org/wiki/Shebang_%28Unix%29), so
+```
+./corusera_submit_dirs.py stencil.py --userna...
+```
+works as well, now.
+
+###Resource folders
+You can either add a `RES` entry to your profile.txt (see [profile_example.txt](./profile_example.txt)) or use the `--resources` option to define folders for python to look for imports in.
+```
+./coursera_submit_dirs.py labs/0/python_lab.py --resources "/shared/with/all/res/" "~/coursera/res"
+```
 
 Tales from the ~~cryp~~..., uuuhm, code.
-----------------------------------------------
+-----------------------------------------
 
-Some documentation of the changes I made.
+Some documentation of the changes I made.<br />
 The code blocks are quite lazily copied from the diff output. Having the script open in an editor aside will certainly help following this.
+
+Also, experienced python programmers will be bored by the following verbosity. I warned you. :p
 
 #####Let's get to it:
 
@@ -115,9 +157,9 @@ with either the arguments of the --resources option or RES in profile.txt or an 
 Sure hope I didn't overlook anything. For me, it works. Let me know if it does for you, too.
 And especially if not! I will try reproduce and solve any issues.
 I'm not exactly sure on how Windows handles all of this, since I haven't had the chance to test it there, yet.
------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------
-So long, never forget:
+
+<hr />
+So long, and never forget:<br />
 'Cause serious coding is supposed to be fun! :)
 
 -r.beer
