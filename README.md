@@ -3,14 +3,14 @@ coursera_submit_dirs.py
 
 Files
 -----------------------------------------
-- coursera_submit_dirs.py - [Coursera](http://coursera.org/) assignment/labs submit script, supporting folders.
-- coursera_submit.patch - Sometimes you fall in love with your code and files, I know that. So in case you don't have the heart to just kill and replace your current coursera_submit.py, here's a patch for it.
-- coursera_submit.py - Original submit script
+- [coursera_submit_dirs.py](./coursera_submit_dirs.py) - [Coursera](http://coursera.org/) assignment/labs submit script, supporting folders.
+- [coursera_submit.patch](./coursera_submit.patch) - Sometimes you fall in love with your code and files, I know that. So in case you don't have the heart to just kill and replace your current coursera_submit.py, here's a patch for it.
+- [coursera_submit.py](./coursera_submit.py) - Original submit script
 
 Folder? What? Why?
 -----------------------------------------
 
-In the version provided by coursera, coursera_submit.py requires **every** (stencil for assignments/labs, resources) file to be in the same directory. Now, in week 3 of my course, I realized: This is gonna end baaaadly.
+In the version provided by [Coursera](http://coursera.org/), coursera_submit.py requires **every** (stencil for assignments/labs, resources) file to be in the same directory. Now, in week 3 of my course, I realized: This is gonna end baaaadly.
 
 | Ugh! | That's better :) |
 |------|------------------|
@@ -40,6 +40,8 @@ You can either add a `RES` entry to your profile.txt (see [profile_example.txt](
 ```
 ./coursera_submit_dirs.py labs/0/python_lab.py --resources "/shared/with/all/res/" "~/coursera/res"
 ```
+***Please note!***<br />
+I've designed the `--resources` option to be additive. Meaning, that even if you provide `--resources` explicitly, your `RES` from profile.txt will still be processed. Enabling you to have a standard library (if you will) and still be able to use other imports temporarily, on top of that.
 
 Tales from the ~~cryp~~..., uuuhm, code.
 -----------------------------------------
