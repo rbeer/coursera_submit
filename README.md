@@ -107,7 +107,7 @@ Yay, done! ![No image, still party!!](https://coursera-forum-screenshots.s3.amaz
 -----------------------------------------------------------------------------------------------------------------
 
 The imports worked now, but as I happily had my trees back, I ran into the problem of having all those resource files, which are partially (e.g. plot.py) used across weeks/assignments/labs. Oh well... Copy them over... Ugh! There's another thing I don't like, just as crowded folders: Redundancy where not needed. I know, this is something I picked up in times where we had only 512KB RAM and 20MB HDDs, but still.
-Luckily, they are more or less static and the only necessity would be, that python has them in its scope; so - once again - `sys.path` to the rescue!
+Luckily, these files are more or less static and the only necessity would be that python has them in its scope; so - once again - `sys.path` to the rescue!
 
 First off:
 
