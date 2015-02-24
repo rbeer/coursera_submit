@@ -10,7 +10,7 @@ Files
 Folder? What? Why?
 -----------------------------------------
 
-In the version provided by [Coursera](http://coursera.org/), coursera_submit.py requires **every** (stencil for assignments/labs, resources) file to be in the same directory. Now, in week 3 of my course, I realized: This is gonna end baaaadly.
+In the version provided by [Coursera](http://coursera.org/), coursera_submit.py requires **every** (stencil for assignments/lab, resource) file to be in the same directory. Now, in week 3 of my course, I realized: This is gonna end baaaadly.
 
 | Ugh! | That's better :) |
 |------|------------------|
@@ -20,7 +20,7 @@ Usage
 -----------------------------------------
 
 ###General
-Invoking the script works pretty much the same as before. With the obvious difference, that you can pass it a URI to a file sitting in another directory.
+Invoking the script works pretty much the same as before. With the obvious difference that you can pass it a URI to a file sitting in another directory.
 ```
 python3 ./coursera_submit_dirs.py labs/0/python_lab.py --username Bob --password ...
 ```
@@ -41,7 +41,7 @@ You can either add a `RES` entry to your profile.txt (see [profile_example.txt](
 ./coursera_submit_dirs.py labs/0/python_lab.py --resources "/shared/with/all/res/" "~/coursera/res"
 ```
 ***Please note!***<br />
-I've designed the `--resources` option to be additive. Meaning, that even if you provide `--resources` explicitly, your `RES` from profile.txt will still be processed. Enabling you to have a standard library (if you will) and still be able to use other imports temporarily, on top of that.
+I've designed the `--resources` option to be additive. Meaning that even if you provide `--resources` explicitly, your `RES` from profile.txt will still be processed. Enabling you to have a standard library and still be able to use other imports temporarily, on top of that.
 
 Tales from the ~~cryp~~..., uuuhm, code.
 -----------------------------------------
@@ -49,7 +49,7 @@ Tales from the ~~cryp~~..., uuuhm, code.
 Some documentation of the changes I made.<br />
 The code blocks are quite lazily copied from the diff output. Having the script open in an editor aside will certainly help following this.
 
-Also, experienced python programmers will be bored by the following verbosity. I warned you. :p
+Also, experienced python programmers will be bored by the following verbosity. You have been warned. :p
 
 #####Let's get to it:
 
