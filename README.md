@@ -145,13 +145,13 @@ First off:
 +            exit(1)
 +    return valid_paths
 ```
-This `parse_res_paths` is called in `if __name__ == '__main__':`
+This [`parse_res_paths`](#parse_res_paths) is called in `if __name__ == '__main__':`
 ```python
 if args.resources != []:
         print('Found resource path(s):')
         sys.path.extend(parse_res_paths(args.resources))
 ```
-with either the arguments of the --resources option or RES in profile.txt or an empty list:
+with either the arguments of the --resources option or the result of [profile_RES_to_list](#profile_RES_to_list) (RES in profile.txt or empty list):
 ```python
 +    parser.add_argument('--resources', default=profile_RES_to_list(), nargs='+', help=next(ihelp))
 ```
