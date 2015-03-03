@@ -111,7 +111,7 @@ Luckily, these files are more or less static and the only necessity would be tha
 
 First off:
 
-#####profile_RES_to_list:<br />***function; returns list of ['/path/','/values', '/from/profile.txt/'] or []***
+<a name="profile_RES_to_list"></a>**profile_RES_to_list:**<br />***function; returns list of ['/path/','/values', '/from/profile.txt/'] or []***
 
 - profile.txt is simply parsed as 'Key Value' pairs, both Key and Value as strings.
 *Saved paths must have the format `RES "path1", "path2", "path3"` for this function to return corret results.*
@@ -120,7 +120,7 @@ First off:
 +    return [ s.replace('"','') for s in profile.get('RES', '').split(',') if s != '' ]
 ```
 
-<a name="parse_res_paths">**parse_res_paths:**</a><br />***function; takes a list of paths (strings); returns list of valid paths (strings)***
+<a name="parse_res_paths"></a>**parse_res_paths:**<br />***function; takes a list of paths (strings); returns list of valid paths (strings)***
 
 - If `res_paths` differs from RES in profile.txt, assume --resources has been used and add RES.
 - Loop through `res_paths` and append to `valid_paths` if p is a directory ([os.path.isdir](https://docs.python.org/3/library/os.path.html#os.path.isdir)(p)).
