@@ -340,7 +340,8 @@ def import_module(module):
 def source(source_files):
     src = ['# submit version: %s\n' % SUBMIT_VERSION]
     for fn in source_files:
-        fn = '%s%s%s' % (dirPrefix, os.sep, fn)
+        if dirPrefix != None:
+            fn = '%s%s%s' % (dirPrefix, os.sep, fn)
         src.append('# %s' % fn)
         with open(fn) as source_f:
             src.append(source_f.read())
