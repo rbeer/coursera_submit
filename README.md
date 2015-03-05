@@ -91,7 +91,8 @@ Adding `dirPrefix` to every received filename
 ```python
 def source(source_files):
 ...
-+        fn = '%s%s%s' % (dirPrefix, os.sep, fn)
++        if dirPrefix != None:
++            fn = '%s%s%s' % (dirPrefix, os.sep, fn)
 ```
 should do the trick, 'though.
 You remember `dirPrefix`, right? Something, global, something? ;)
