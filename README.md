@@ -1,3 +1,5 @@
+[![endorse](https://api.coderwall.com/rbeer/endorsecount.png)](https://coderwall.com/rbeer)
+
 coursera_submit_dirs.py
 =========================================
 
